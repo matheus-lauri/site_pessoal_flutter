@@ -61,7 +61,6 @@ class HomePage extends StatelessWidget {
             _buildHeroSection(context),
             _buildAboutSection(context),
             _buildSkillsSection(context),
-            // _buildPortfolioSection(context), // Add this when you have projects
             _buildContactSection(context),
             _buildFooterSection(),
           ],
@@ -129,13 +128,10 @@ class HomePage extends StatelessWidget {
                   width: isMobile ? 200 : 300,
                   height: isMobile ? 200 : 300,
                   decoration: BoxDecoration(
-                    color: Colors.grey[800],
                     borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Sua Foto Aqui',
-                      style: TextStyle(color: Colors.white),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/minha_foto.jpg'),
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -162,7 +158,7 @@ class HomePage extends StatelessWidget {
           ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 800),
             child: Text(
-              'Sou um desenvolvedor full stack com experiência em diversas tecnologias como HTML, CSS, JavaScript, PHP, React, Java, .NET (C#), Kotlin, React Native, C++, Python, Assembly e, atualmente, Flutter. Tenho paixão por transformar ideias em interfaces de usuário bonitas e funcionais, e por construir sistemas robustos e escaláveis. Busco constantemente aprender novas tecnologias e aprimorar minhas habilidades para entregar soluções de alta qualidade. Além do desenvolvimento, sou um entusiasta de design e usabilidade, sempre buscando criar produtos que sejam intuitivos e agradáveis para o usuário.',
+              'Sou um desenvolvedor full stack com experiência em diversas tecnologias como HTML, CSS, JavaScript, PHP, React, Java, .NET (C#), Kotlin, React Native, C++, Python, Assembly e, atualmente, Flutter. Tenho paixão por transformar ideias em interfaces de usuário bonitas e funcionais, e por construir sistemas robustos e escaláveis. Busco constantemente aprender novas tecnologias e aprimorar minhas habilidades para entregar soluções de alta qualidade.',
               style: Theme.of(context).textTheme.bodyLarge,
               textAlign: TextAlign.center,
             ),
@@ -278,7 +274,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     IconButton(
                       icon: const FaIcon(FontAwesomeIcons.linkedin, color: Colors.white, size: 30),
-                      onPressed: () => _launchURL('https://www.linkedin.com/in/matheus-baron-lauritzen-b7b7b71b7/'), // Replace with your LinkedIn
+                      onPressed: () => _launchURL('https://linkedin.com/in/matheus-baron-lauritzen-6b970a237'),
                     ),
                     const SizedBox(width: 20),
                     IconButton(
@@ -306,7 +302,7 @@ class HomePage extends StatelessWidget {
       color: const Color(0xFF1A1A1A),
       child: const Center(
         child: Text(
-          '© 2024 Matheus Baron Lauritzen. Todos os direitos reservados.',
+          '© Matheus Baron Lauritzen. Todos os direitos reservados.',
           style: TextStyle(color: Colors.white70, fontSize: 14),
           textAlign: TextAlign.center,
         ),
